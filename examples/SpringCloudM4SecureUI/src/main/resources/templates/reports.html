@@ -1,0 +1,25 @@
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" 
+integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+</link>
+</head>
+
+<body>
+<div class="row">
+	<div class="col-md-2"></div>
+	<div class="col-md-8">
+		<h1>Secure App - Reports Page</h1>
+		<table class="table table-striped">
+			<tr><th>Currency</th><th>Conversion Rate</th><th>Amount</th></tr>
+			<tr th:each="price : ${prices}">
+				<td th:text="${price.currency}"></td>
+				<td th:text="${price.conversionRate}"></td>
+				<td th:text="${price.amount}"></td>
+			</tr>
+		</table>
+		
+	</div>
+</div>
+</body>
+</html>
