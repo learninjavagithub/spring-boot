@@ -1,0 +1,37 @@
+{
+    // See https://go.microsoft.com/fwlink/?LinkId=733558
+    // for the documentation about the tasks.json format
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "clean-build",
+            "type": "shell",
+            "command": "gradle clean build",
+            "options": {
+                "cwd": "complete"
+            },
+            "problemMatcher": [],
+            "group": "build"
+        },
+        {
+            "label": "test",
+            "type": "shell",
+            "command": "gradle test",
+            "options": {
+                "cwd": "complete"
+            },
+            "problemMatcher": [],
+            "group": "test"
+        },
+        {
+            "label": "run",
+            "type": "shell",
+            "command": "gradle bootRun",
+            "options": {
+                "cwd": "complete"
+            },
+            "problemMatcher": [],
+            "group": "build"
+        }
+    ]
+}
